@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
     <title>My Notes</title>
 </head>
 <body>
-    <header>
-        <img src="logo.svg" alt="My Notes logo"/>
+    <header class="navbar">
+        <ul class="navbar__navigation">
+            <li class="navbar__navigation--item">
+                <a href="#" class="navbar__link">Add</a>
+            </li>
+            <li>
+                <div class="navbar__brand">
+                    <img src="logo.svg" alt="My Notes logo">
+                </div>
+            </li>
+            <li class="navbar__navigation--item">
+                <a href="#" class="navbar__link">Notes</a>
+            </li>
+        </ul>
     </header>
-    <main>
-        <section class="form">
+    <main class="main">
+        <section>
             <h1>Add new notes</h1>
+            <form class="form" action="/entry" method="POST">
+                <p class="form__input">
+                    <label for="entry" class="form__label">Entry notes</label>
+                    <textarea type="content" id="entry" class="form__textarea"></textarea>
+                </p>
+                <button type="submit" value="Submit" class="form__submit">Add</button>
+            </form>
         </section>
-        <section class="added_notes">
+        <section>
             <h1>Recent notes</h1>
             <article>
                 <div>
@@ -25,8 +45,17 @@
             </article>
         </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__content">
+            <section class="left"></section>
+                <a class="footer__item">Made for learning purposes</a>
+                <a class="footer__item">Good luck!</a>
+            <section class="right"></section>
+                <div class="footer__column">
+                    <a class="footer__item">How this was made</a>
+                    <a class="footer__item">About</a>
+                </div>
+        </div>
     </footer>
     
 </body>

@@ -40,10 +40,11 @@
             {% for entry in entries %}
             <article class="entry">
                 <div>
-                    <time class="entry__date" datetime="08-07-2025">• Jul 8</time>
+                    <h2 class="entry__title">{{ entry[0] | truncate(20, true) }}</h2>
+                    <time class="entry__date" datetime="08-07-2025">• {{ entry[1] }}</time>
                 </div>
                 <p class="entry__content">
-                    Dnešní hodina informatiky stála za to.
+                    {{entry[0]}}
                 </p>
             </article>
             {% endfor %}

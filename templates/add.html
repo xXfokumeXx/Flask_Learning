@@ -37,7 +37,7 @@
         </section>
         <section>
             <h1>Recent notes</h1>
-            {% for entry in entries %}
+            {% for entry in entries[::-1] %}
             <article class="entry">
                 <div>
                     <h2 class="entry__title">{{ entry[0] | truncate(20, true) }}</h2>

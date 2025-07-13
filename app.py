@@ -1,7 +1,9 @@
 import datetime
 from flask import Flask, render_template, request
+from pymongo import MongoClient
 
 app = Flask(__name__)
+client = MongoClient("mongodb+srv://programkogjj:programovanijebest!?@cluster0.sryitvq.mongodb.net/")
 
 entries = []
 
